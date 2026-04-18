@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download My App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+    }
+    .container {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 400px;
+      text-align:center;
+      box-shadow: 0 0 30px rgba(255,255,0,0.2);
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    h1 {
+      color: #ffd700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display:inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #ffd700, #ffcc00);
+      color:#000;
+      font-weight:600;
+      border-radius:30px;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow: 0 0 15px rgba(255,215,0,0.6);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,215,0,1);
+    }
+    .info {
+      margin-top:20px;
+      font-size:13px;
+      color:#aaa;
+    }
+    .footer {
+      margin-top:30px;
+      font-size:12px;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="safeher-logo.png" class="logo" alt="App Logo">
+  <h1>My Apk</h1>
+  <p>A modern system designed to make your tasks easier and faster.</p>
+
+  <!-- CHANGE THIS LINK -->
+  <a href="https://drive.google.com/drive/folders/1vE2HCvNOA0fJcp7qi-kjVNAd_pkPxQz1?usp=drive_link" class="btn" download>
+    Download APK
+  </a>
+
+  <div class="info">
+    Version: 1.0.0<br>
+    Size: 15 MB<br>
+    Requires Android 7.0+
+  </div>
+
+  <div class="footer">
+    Developed by Jey-ar Yago<br>
+    BSIT Student
+  </div>
+</div>
+
+</body>
+</html>
