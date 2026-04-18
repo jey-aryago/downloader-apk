@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download My App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+    .container {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 420px;
+      text-align:center;
+      box-shadow: 0 0 30px rgba(255,255,0,0.2);
+    }
+    .logo { width: 90px; margin-bottom: 10px; }
+    h1 { color: #ffd700; margin-bottom: 8px; }
+    p { font-size: 14px; color: #ccc; margin-bottom: 18px; }
+
+    .btn {
+      display:inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #ffd700, #ffcc00);
+      color:#000;
+      font-weight:600;
+      border-radius:30px;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow: 0 0 15px rgba(255,215,0,0.6);
+      margin-bottom: 15px;
+    }
+    .btn:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(255,215,0,1); }
+
+    .qr-box {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+    }
+    .qr-box img { width: 180px; }
+    .qr-text { font-size: 13px; color:#aaa; margin-top:10px; }
+
+    .info { margin-top:15px; font-size:13px; color:#aaa; }
+    .footer { margin-top:25px; font-size:12px; color:#666; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="safeher-logo.png" class="logo" alt="App Logo">
+  <h1>My App</h1>
+  <p>Scan the QR code or click the button to download the APK.</p>
+
+  <!-- APK DOWNLOAD LINK -->
+  <a id="downloadBtn" href="https://www.mediafire.com/file/jd58p9v9zmyo2xb/SAFEHER_Guardian.apk/file" class="btn" download>
+    Download APK
+  </a>
+
+  <!-- QR CODE -->
+  <div class="qr-box">
+    <img id="qrImage" src="" alt="QR Code">
+    <div class="qr-text">Scan to download</div>
+  </div>
+
+  <div class="info">
+    Version: 1.0.0<br>
+    Size: 15 MB<br>
+    Requires Android 7.0+
+  </div>
+
+  <div class="footer">
+    Developed by Jey-ar Yago<br>
+    BSIT Student
+  </div>
+</div>
+
+<script>
+  // 🔗 CHANGE THIS LINK ONLY
+  const apkLink = "https://www.mediafire.com/file/jd58p9v9zmyo2xb/SAFEHER_Guardian.apk/file";
+
+  // Generate QR using free API
+  const qrAPI = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(apkLink);
+
+  document.getElementById("qrImage").src = qrAPI;
+  document.getElementById("downloadBtn").href = apkLink;
+</script>
+
+</body>
+</html>
