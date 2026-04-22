@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download My Apps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+
+    .container {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      width: 450px;
+      text-align:center;
+      box-shadow: 0 0 30px rgba(255,255,0,0.2);
+    }
+
+    h1 { color: #ffd700; margin-bottom: 10px; }
+
+    .app-box {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .logo {
+      width: 70px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(255,215,0,0.5);
+    }
+
+    .btn {
+      display:inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #ffd700, #ffcc00);
+      color:#000;
+      font-weight:600;
+      border-radius:30px;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow: 0 0 15px rgba(255,215,0,0.6);
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(255,215,0,1);
+    }
+
+    .qr-box img {
+      width: 150px;
+      margin-top:10px;
+    }
+
+    .footer {
+      margin-top:25px;
+      font-size:12px;
+      color:#666;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Download My Apps</h1>
+
+  <!-- SAFEHER -->
+  <div class="app-box">
+    <img src="safeher-logo.png" class="logo" alt="SAFEHER Logo">
+    <h3>SAFEHER Guardian</h3>
+    <a id="safeherBtn" class="btn" download>Download APK</a>
+    <div class="qr-box">
+      <img id="safeherQR">
+    </div>
+  </div>
+
+  <!-- DEVPULSE -->
+  <div class="app-box">
+    <img src="logo.png" class="logo" alt="DevPulse Logo">
+    <h3>DevPulse</h3>
+    <a id="devpulseBtn" class="btn" download>Download APK</a>
+    <div class="qr-box">
+      <img id="devpulseQR">
+    </div>
+  </div>
+
+  <div class="footer">
+    Developed by Jey-ar Yago
+  </div>
+</div>
+
+<script>
+  const safeherLink = "https://www.mediafire.com/file/jd58p9v9zmyo2xb/SAFEHER_Guardian.apk/file";
+  const devpulseLink = "https://www.mediafire.com/file/g6chpfrwe0agjww/DevPulse.apk/file";
+
+  function generateQR(link) {
+    return "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(link);
+  }
+
+  document.getElementById("safeherBtn").href = safeherLink;
+  document.getElementById("safeherQR").src = generateQR(safeherLink);
+
+  document.getElementById("devpulseBtn").href = devpulseLink;
+  document.getElementById("devpulseQR").src = generateQR(devpulseLink);
+</script>
+
+</body>
+</html>
